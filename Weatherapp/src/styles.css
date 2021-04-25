@@ -1,0 +1,24 @@
+.wholePage{
+    border: 1px solid rgba(0,0,0,0.3);
+    margin: 50px auto;
+    max-width: 900px;
+    background-color:lightgoldenrodyellow;
+}
+
+.searchIcon {
+    position: absolute;
+    display: inline-flex;
+    padding:5px 10px;
+}
+
+.searchText {
+    padding-left: 30px;
+}
+
+.searchBar {
+    padding: 10px;
+
+}
+ .city {
+    text-transform: capitalize;
+ }
