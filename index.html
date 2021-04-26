@@ -1,57 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <script
     src="https://kit.fontawesome.com/8783d4585c.js"
-    crossorigin="anonymous"
-  ></script>
+    crossorigin="anonymous"></script>
     <link href="src/styles.css" rel="stylesheet" />
-  </head>
-  <body>
-  <div class="wholePage">
-    <form id="Search-City">
-    <div class="searchBar">
-    <div class="searchIcon"><i class="fas fa-search"></i></div>
-      <input type="search" placeholder="Search for a city" class="searchText" id="City-input"/>
-      <input type="submit" value="Search">
-    </div>
-    </form>
-    <div class="row">
-    <div class="col-sm-9">
+<body>
+    <div class="mainBody">
+        <form id="Search-City">
+            <div class="searchBar">
+            <div class="searchIcon"><i class="fas fa-search"></i></div>
+              <input type="search" placeholder="Search for a city" class="searchText" id="City-input"/>
+              <input type="submit" value="Search">
+            </div>
+          </form>
     <h1 class="city" id="city">Edinburgh, Scotland</h1>
-    <h2 id="date">Date</h2>
-    <h2 id="time">Time</h2>
-      <div class="row">
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col">
-            <img src="img/cloud.png" alt="cloudy">
-          </div>
-          <div class="col">
-          <h2 id="displayTemp">6°C</h2>
-          <h2 id="weatherState">Cloudy</h2>
+    <p class="date" id="date">Date</p>
+    <p class="time" id="time">Time</p>
+    <img src="img/cloud.png" alt="cloudy">
+      <h2 id="displayTemp">6°C</h2>
+      <h2 id="weatherState">Cloudy</h2>
           <span class="feelsLike">Feels like=xxx</span>
           <span class="wind">Wind=xxx</span>
-          </div>
-        </div>
-      </div>
-      </div>
-      </div>
-      <p class="description">
-          Day: Watch out for scattered rain showers. The high will be 10°. <br>
-          Night: The skies will be partly cloudy. The low will be 6°.
-        </p>
         <div class="row">
           <div class="col day">
             Monday<br>
@@ -72,7 +52,6 @@
             Cloudy</div>
         </div>
     </div>
-  </div>
     <p class="codedby"><a href="https://github.com/mipies/WheatherApp" target="_blank" class="gitLink">Open-source code</a> by Michalina P.</p>
   </body>
   <script src="src/index.js"></script>

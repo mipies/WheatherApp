@@ -1,6 +1,7 @@
-.wholePage{
+.mainBody{
     border: 1px solid rgba(0,0,0,0.3);
     margin: 50px auto;
+    padding: 10px;
     max-width: 900px;
     background-color:lightgoldenrodyellow;
 }
@@ -30,4 +31,12 @@
 
 .gitLink {
     text-decoration: none;
+}
+
+.date .time {
+    display: inline;
+}
+
+img {
+    display: inline-flex;
 }
