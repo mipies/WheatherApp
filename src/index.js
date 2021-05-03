@@ -102,7 +102,7 @@ function displayForecast(response){
   let forecastHTML = `<div class="row">`;
 
   forecast.forEach(function (forecastDay, index) {
-  if (index < 5 ) {
+  if (index < 6 && index > 0 ) {
   forecastHTML = forecastHTML + `
   <div class="col-sm"><span id="weekDay">${formatDay(forecastDay.dt)}</span><br>
     <img src="img/${forecastDay.weather[0].icon}.png" alt="weatherIcon" id="smallicon"><br />
