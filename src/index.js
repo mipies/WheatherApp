@@ -104,7 +104,7 @@ function displayForecast(response){
   forecast.forEach(function (forecastDay, index) {
   if (index < 5 ) {
   forecastHTML = forecastHTML + `
-  <div class="col"><span id="weekDay">${formatDay(forecastDay.dt)}</span><br>
+  <div class="col-sm"><span id="weekDay">${formatDay(forecastDay.dt)}</span><br>
     <img src="img/${forecastDay.weather[0].icon}.png" alt="weatherIcon" id="smallicon"><br />
      <span class="maxTemp">${Math.round(forecastDay.temp.max)}</span>° | <span class="minTemp">${Math.round(forecastDay.temp.min)}</span>°<br>
     <span id="forDescription">${forecastDay.weather[0].main}</span>
