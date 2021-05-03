@@ -29,6 +29,8 @@ function getWeather(response) {
   wind.innerHTML=(`Wind: ${windSpeed} mph`);
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = (`Humidity: ${response.data.main.humidity}%`);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src", `/img/${response.data.weather[0].icon}.png`);
 }
 
 

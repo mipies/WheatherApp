@@ -14,8 +14,6 @@
     <script
     src="https://kit.fontawesome.com/8783d4585c.js"
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/weather-icons.css">
-    <link rel="stylesheet" href="css/weather-icons-wind.css">
     <link href="src/styles.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
@@ -25,7 +23,7 @@
         <div class="searchBar">
           <div class="searchIcon"><i class="fas fa-search"></i></div>
             <input type="search" placeholder="Search for a city" class="searchText" id="City-input"/>
-            <input type="submit" value="Search">
+            <input type="submit" value="Search" class="button">
           </div>
     </form>
     <h1 class="city" id="city">Edinburgh</h1>
@@ -34,7 +32,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-         <img src="img/cloud.png" alt="cloudy">
+         <img src="img/01d.png" alt="weatherIcon" id="icon">
         </div>
         <div class="col">
           <h2 id="displayTemp">6°C</h2>
@@ -42,9 +40,9 @@
         </div>
         <div class="col">
           <div class="additionalInfo">
-          <span id="feelsLike">Feels like=xxx</span><br />
-          <span id="wind">Wind=xxx</span><br />
-          <span id="humidity">humidity=xxx</span>
+        <span id="feelsLike">Feels like=xxx</span><br />
+        <span id="wind">Wind=xxx</span><br />
+        <span id="humidity">humidity=xxx</span>
         </div>
         </div>
       </div>
