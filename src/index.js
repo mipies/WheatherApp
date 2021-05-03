@@ -96,25 +96,31 @@ function formatDay (timestamp) {
   return days[day];
 }
 
-function displayForecast(response){
-  let forecastElement=document.querySelector("#forecast");
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.daily;
   let forecastHTML = `<div class="row">`;
-
   forecast.forEach(function (forecastDay, index) {
-  if (index < 6 ) {
-  forecastHTML = forecastHTML + `
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
   <div class="col-sm"><span id="weekDay">${formatDay(forecastDay.dt)}</span><br>
-    <img src="img/${forecastDay.weather[0].icon}.png" alt="weatherIcon" id="smallicon"><br />
-     <span class="maxTemp">${Math.round(forecastDay.temp.max)}</span>° | <span class="minTemp">${Math.round(forecastDay.temp.min)}</span>°<br>
+    <img src="img/${
+      forecastDay.weather[0].icon
+    }.png" alt="weatherIcon" id="smallicon"><br />
+     <span class="maxTemp">${Math.round(
+       forecastDay.temp.max
+     )}</span>° | <span class="minTemp">${Math.round(
+          forecastDay.temp.min
+        )}</span>°<br>
     <span id="forDescription">${forecastDay.weather[0].main}</span>
   </div>
   `;
-  };
+    }
+  });
   forecastHTML = forecastHTML + ` </div>`;
-
-  forecastElement.innerHTML=forecastHTML;
-});
+  forecastElement.innerHTML = forecastHTML;
 }
 
 search("Edinburgh");
