@@ -1,15 +1,21 @@
 .mainBody{
-    border: 1px solid rgba(0,0,0,0.3);
+    border: 1px solid transparent;
+    border-radius: 30px;
+    box-shadow: 5px 10px 15px 1px rgba(0, 0, 0, 0.2);
     margin: 50px auto;
     padding: 10px;
     max-width: 900px;
-    background-color:lightgoldenrodyellow;
+    background: linear-gradient(0deg, rgba(105,205,235,1) 0%, rgba(0,87,156,1) 100%);;
 }
 
 .searchIcon {
     position: absolute;
     display: inline-flex;
     padding:5px 10px;
+}
+
+.fa-search {
+    color: #2a2a2a;
 }
 
 .searchText {
@@ -22,6 +28,8 @@
 }
  .city {
     text-transform: capitalize;
+    font-family: 'Balsamiq Sans', cursive;
+    color: white;
  }
 
 .codedby {
@@ -31,4 +39,26 @@
 
 .gitLink {
     text-decoration: none;
+}
+
+#date, #time {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    line-height: 0;
+    color: rgba(237, 245, 247, 0.8)
+}
+
+#displayTemp, #weatherState {
+    font-family: 'Balsamiq Sans', cursive;
+    color: white;
+    text-transform: capitalize;
+}
+
+.additionalInfo {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+#forecast {
+    color: white;
 }

@@ -1,21 +1,34 @@
 let CitySearch = document.querySelector("#Search-City");
-CitySearch.addEventListener("submit", Search);
+CitySearch.addEventListener("submit", handleSubmit);
 
-function Search(event) {
-  event.preventDefault();
-  let CityName = document.querySelector("#City-input");
-  let City = document.querySelector("#city");
-  City.innerHTML = CityName.value;
+function search(city) {
   let apiKey = "41d2e38564bc792ac8788e0097b24f74";
   let units = "metric";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${CityName.value}&appid=${apiKey}&units=${units}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(url).then(getWeather);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let CityName = document.querySelector("#City-input");
+  search(CityName.value);
 }
 
 function getWeather(response) {
+  let City = document.querySelector("#city");
+  City.innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let currentTemp = document.querySelector("#displayTemp");
   currentTemp.innerHTML = (`${temperature}°C`);
+  let weatherDescription =document.querySelector("#weatherState");
+  weatherDescription.innerHTML = response.data.weather[0].description;
+  let feelTemp=Math.round(response.data.main.feels_like);
+  let feelsLike=document.querySelector("#feelsLike");
+  feelsLike.innerHTML=(`Feels like: ${feelTemp}°C`);
+  let wind = document.querySelector("#wind");
+  let windSpeed = Math.round(response.data.wind.speed*2.24);
+  wind.innerHTML=(`Wind: ${windSpeed} mph`);
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = (`Humidity: ${response.data.main.humidity}%`);
 }
 
 
@@ -60,3 +73,5 @@ function setTime(date) {
 }
 let time=document.querySelector("#time");
 time.innerHTML=setTime(today);
+
+search("Edinburgh");

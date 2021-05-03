@@ -14,7 +14,11 @@
     <script
     src="https://kit.fontawesome.com/8783d4585c.js"
     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/weather-icons.css">
+    <link rel="stylesheet" href="css/weather-icons-wind.css">
     <link href="src/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
 <body>
   <div class="mainBody">
     <form id="Search-City">
@@ -24,9 +28,9 @@
             <input type="submit" value="Search">
           </div>
     </form>
-    <h1 class="city" id="city">Edinburgh, Scotland</h1>
-    <p class="date" id="date">Date</p>
-    <p class="time" id="time">Time</p>
+    <h1 class="city" id="city">Edinburgh</h1>
+    <p class="datentime"><span class="date" id="date">Date</span>
+    <span class="time" id="time">Time</span></p>
     <div class="container">
       <div class="row">
         <div class="col">
@@ -37,11 +41,15 @@
           <h2 id="weatherState">Cloudy</h2>
         </div>
         <div class="col">
-          <span class="feelsLike">Feels like=xxx</span>
-          <span class="wind">Wind=xxx</span>
+          <div class="additionalInfo">
+          <span id="feelsLike">Feels like=xxx</span><br />
+          <span id="wind">Wind=xxx</span><br />
+          <span id="humidity">humidity=xxx</span>
+        </div>
         </div>
       </div>
     </div>
+    <div id="forecast">
     <div class="row">
       <div class="col day">
         Monday<br>
@@ -62,7 +70,9 @@
         Cloudy</div>
       </div>
     </div>
-    <p class="codedby"><a href="https://github.com/mipies/WheatherApp" target="_blank" class="gitLink">Open-source code</a> by Michalina P.</p>
+    </div>
+    <p class="codedby"><a href="https://github.com/mipies/WheatherApp" target="_blank" class="gitLink">Open-source code</a> by Michalina P. 
+    <a href="https://www.linkedin.com/in/michalina-pie%C5%9Bci%C5%84ska-1110bb100/" target="_blank"><i class="fab fa-linkedin"></i></a></p>
   </body>
   <script src="src/index.js"></script>
 </html>
