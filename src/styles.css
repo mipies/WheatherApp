@@ -47,6 +47,10 @@ transition: all .5s ease-in-out;
     cursor: pointer;
 }
 
+form {
+    display: inline-block;
+}
+
  .city {
     text-transform: capitalize;
     font-family: 'Roboto Slab', serif;
@@ -90,4 +94,8 @@ transition: all .5s ease-in-out;
 
 #forecast {
     color: white;
+}
+
+#smallicon {
+    max-width: 42px;
 }

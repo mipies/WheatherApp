@@ -76,4 +76,24 @@ function setTime(date) {
 let time=document.querySelector("#time");
 time.innerHTML=setTime(today);
 
+function displayForecast(){
+  let forecastElement=document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  let days=["thu", "fri", "sat"];
+  days.forEach(function (day) {
+  forecastHTML = forecastHTML + `
+  <div class="col"><span id="weekDay">${day}</span><br>
+    <img src="img/01d.png" alt="weatherIcon" id="smallicon"><br />
+     <span class="maxTemp">8</span>° | <span class="minTemp">6</span>°<br>
+    <span id="forDescription">Cloudy</span>
+  </div>
+  `;
+  });
+  forecastHTML = forecastHTML + ` </div>`;
+
+  forecastElement.innerHTML=forecastHTML;
+}
+displayForecast();
 search("Edinburgh");
