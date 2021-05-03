@@ -105,15 +105,15 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-  <div class="col-sm"><span id="weekDay">${formatDay(forecastDay.dt)}</span><br>
+  <div class="col-sm" id="forecastDay"><span id="weekDay">${formatDay(forecastDay.dt)}</span><br>
     <img src="img/${
       forecastDay.weather[0].icon
     }.png" alt="weatherIcon" id="smallicon"><br />
-     <span class="maxTemp">${Math.round(
+     <span class="maxTemp"><strong>${Math.round(
        forecastDay.temp.max
-     )}</span>° | <span class="minTemp">${Math.round(
+     )}°</strong></span> | <span class="minTemp">${Math.round(
           forecastDay.temp.min
-        )}</span>°<br>
+        )}°</span><br>
     <span id="forDescription">${forecastDay.weather[0].main}</span>
   </div>
   `;

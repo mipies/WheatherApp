@@ -74,7 +74,7 @@ form {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     line-height: 0;
-    color: rgba(237, 245, 247, 0.8)
+    color: rgba(237, 245, 247, 0.8);
 }
 
 #displayTemp, #weatherState {
@@ -102,4 +102,21 @@ form {
 
 #forDescription {
     text-transform: capitalize;
+}
+
+#forecastDay {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#forecast {
+    padding: 15px 10px;
+}
+
+#weekDay {
+    font-family: 'Roboto Slab', serif;
+}
+
+.minTemp {
+    color: rgba(237, 245, 247, 0.8);
 }
