@@ -99,3 +99,7 @@ form {
 #smallicon {
     max-width: 42px;
 }
+
+#forDescription {
+    text-transform: capitalize;
+}
